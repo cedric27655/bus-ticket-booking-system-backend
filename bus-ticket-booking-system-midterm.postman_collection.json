@@ -1,816 +1,1139 @@
 {
-	"info": {
-		"name": "Bus Ticket Booking System Mid-Term API",
-		"description": "Postman Collection for Bus Ticket Booking System Backend Mid-Term Examination - Ndagijimana Cedric (ID: 27655)",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "A2 - Save Route",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"name\": \"Kigali - Gisenyi\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/routes/save",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "routes", "save"]
-				}
-			}
-		},
-		{
-			"name": "A2 - Get All Routes",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/routes/all",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "routes", "all"]
-				}
-			}
-		},
-		{
-			"name": "A2 - Get Route By Id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/routes/11111111-1111-1111-1111-111111111111",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "routes", "11111111-1111-1111-1111-111111111111"]
-				}
-			}
-		},
-		{
-			"name": "A2 - Get Route By Id (404 Not Found)",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/routes/99999999-9999-9999-9999-999999999999",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "routes", "99999999-9999-9999-9999-999999999999"]
-				}
-			}
-		},
-		{
-			"name": "A2 - Update Route",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"name\": \"Kigali - Huye Express\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/routes/update/11111111-1111-1111-1111-111111111111",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "routes", "update", "11111111-1111-1111-1111-111111111111"]
-				}
-			}
-		},
-		{
-			"name": "A2 - Delete Route (404 Not Found)",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/routes/delete/99999999-9999-9999-9999-999999999999",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "routes", "delete", "99999999-9999-9999-9999-999999999999"]
-				}
-			}
-		},
-		{
-			"name": "A2 - Save Bus",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"busNumber\": 5,\n    \"name\": \"Trinity Express\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/buses/save",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "buses", "save"]
-				}
-			}
-		},
-		{
-			"name": "A2 - Get All Buses",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/buses/all",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "buses", "all"]
-				}
-			}
-		},
-		{
-			"name": "A2 - Save Driver",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"firstName\": \"Claude\",\n    \"lastName\": \"Mugabo\",\n    \"phone\": \"0788991122\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/drivers/save",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "drivers", "save"]
-				}
-			}
-		},
-		{
-			"name": "A2 - Get All Drivers",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/drivers/all",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "drivers", "all"]
-				}
-			}
-		},
-		{
-			"name": "A2 - Save Passenger",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"firstName\": \"Patrick\",\n    \"lastName\": \"Gasana\",\n    \"nationalId\": \"1200080099887766\",\n    \"phone\": \"0788998877\"\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/passengers/save",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "passengers", "save"]
-				}
-			}
-		},
-		{
-			"name": "A2 - Get All Passengers",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/passengers/all",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "passengers", "all"]
-				}
-			}
-		},
-		{
-			"name": "B1 - Find Passengers by Last Name",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/passengers/by-last-name?lastName=mugwaneza",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "passengers", "by-last-name"],
-					"query": [
-						{
-							"key": "lastName",
-							"value": "mugwaneza"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "B2 - Ticket Bookings by Status",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/ticket-bookings/by-status?status=BOOKED",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "ticket-bookings", "by-status"],
-					"query": [
-						{
-							"key": "status",
-							"value": "BOOKED"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "B3 - Ticket Bookings in Date Range",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/ticket-bookings/between?start=2026-10-01&end=2026-10-31",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "ticket-bookings", "between"],
-					"query": [
-						{
-							"key": "start",
-							"value": "2026-10-01"
-						},
-						{
-							"key": "end",
-							"value": "2026-10-31"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "C1 - Drivers by Route",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/drivers/by-route?name=huye",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "drivers", "by-route"],
-					"query": [
-						{
-							"key": "name",
-							"value": "huye"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "C2 - Free Buses",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/buses/free",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "buses", "free"]
-				}
-			}
-		},
-		{
-			"name": "C3 - Routes Nobody Holds",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/routes/unused",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "routes", "unused"]
-				}
-			}
-		},
-		{
-			"name": "C4 - Passengers of a Driver",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/passengers/of-driver/bbbb1111-1111-1111-1111-111111111111",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "passengers", "of-driver", "bbbb1111-1111-1111-1111-111111111111"]
-				}
-			}
-		},
-		{
-			"name": "C4 - Passengers of a Driver (404 Not Found)",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/passengers/of-driver/99999999-9999-9999-9999-999999999999",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "passengers", "of-driver", "99999999-9999-9999-9999-999999999999"]
-				}
-			}
-		},
-		{
-			"name": "D1 - Safe Saving (Success)",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"travelDate\": \"2026-11-28\",\n    \"seatNumber\": 10,\n    \"destination\": \"Huye\",\n    \"passenger\": {\n        \"id\": \"cccc1111-1111-1111-1111-111111111111\"\n    },\n    \"driver\": {\n        \"id\": \"bbbb1111-1111-1111-1111-111111111111\"\n    }\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/ticket-bookings/save",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "ticket-bookings", "save"]
-				}
-			}
-		},
-		{
-			"name": "D1 - Past Date (400 Bad Request)",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"travelDate\": \"2026-10-01\",\n    \"seatNumber\": 1,\n    \"destination\": \"Huye\",\n    \"passenger\": {\n        \"id\": \"cccc1111-1111-1111-1111-111111111111\"\n    },\n    \"driver\": {\n        \"id\": \"bbbb1111-1111-1111-1111-111111111111\"\n    }\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/ticket-bookings/save",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "ticket-bookings", "save"]
-				}
-			}
-		},
-		{
-			"name": "D1 - Driver Already Booked (409 Conflict)",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"travelDate\": \"2026-11-18\",\n    \"seatNumber\": 2,\n    \"destination\": \"Musanze\",\n    \"passenger\": {\n        \"id\": \"cccc1111-1111-1111-1111-111111111111\"\n    },\n    \"driver\": {\n        \"id\": \"bbbb1111-1111-1111-1111-111111111111\"\n    }\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/ticket-bookings/save",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "ticket-bookings", "save"]
-				}
-			}
-		},
-		{
-			"name": "D2 - Status Flow (Success)",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/ticket-bookings/dddd5555-5555-5555-5555-555555555555/status?status=PAID",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "ticket-bookings", "dddd5555-5555-5555-5555-555555555555", "status"],
-					"query": [
-						{
-							"key": "status",
-							"value": "PAID"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "D2 - Status Flow (400 Invalid Transition)",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/ticket-bookings/dddd2222-2222-2222-2222-222222222222/status?status=BOOKED",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "ticket-bookings", "dddd2222-2222-2222-2222-222222222222", "status"],
-					"query": [
-						{
-							"key": "status",
-							"value": "BOOKED"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "D2 - Status Flow (404 Not Found)",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/ticket-bookings/99999999-9999-9999-9999-999999999999/status?status=PAID",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "ticket-bookings", "99999999-9999-9999-9999-999999999999", "status"],
-					"query": [
-						{
-							"key": "status",
-							"value": "PAID"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "D3 - Add Route to Driver (Success)",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/drivers/bbbb3333-3333-3333-3333-333333333333/routes/22222222-2222-2222-2222-222222222222",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "drivers", "bbbb3333-3333-3333-3333-333333333333", "routes", "22222222-2222-2222-2222-222222222222"]
-				}
-			}
-		},
-		{
-			"name": "D3 - Driver Already Has Route (409 Conflict)",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/drivers/bbbb1111-1111-1111-1111-111111111111/routes/11111111-1111-1111-1111-111111111111",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "drivers", "bbbb1111-1111-1111-1111-111111111111", "routes", "11111111-1111-1111-1111-111111111111"]
-				}
-			}
-		},
-		{
-			"name": "D3 - Driver Not Found (404 Not Found)",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/drivers/99999999-9999-9999-9999-999999999999/routes/11111111-1111-1111-1111-111111111111",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "drivers", "99999999-9999-9999-9999-999999999999", "routes", "11111111-1111-1111-1111-111111111111"]
-				}
-			}
-		},
-		{
-			"name": "D4 - Move Driver to Another Bus (Success)",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/drivers/bbbb3333-3333-3333-3333-333333333333/bus?busNumber=4",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "drivers", "bbbb3333-3333-3333-3333-333333333333", "bus"],
-					"query": [
-						{
-							"key": "busNumber",
-							"value": "4"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "D4 - Bus Taken by Another Driver (409 Conflict)",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/drivers/bbbb3333-3333-3333-3333-333333333333/bus?busNumber=1",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "drivers", "bbbb3333-3333-3333-3333-333333333333", "bus"],
-					"query": [
-						{
-							"key": "busNumber",
-							"value": "1"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "D4 - Bus Not Found (404 Not Found)",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/drivers/bbbb3333-3333-3333-3333-333333333333/bus?busNumber=99",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "drivers", "bbbb3333-3333-3333-3333-333333333333", "bus"],
-					"query": [
-						{
-							"key": "busNumber",
-							"value": "99"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "E1 - Write a Luggage Item (Success)",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"itemName\": \"Travel bag\",\n    \"description\": \"Blue bag in the hold\",\n    \"weightKg\": 15\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/luggage-items/save?ticketBookingId=dddd2222-2222-2222-2222-222222222222",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "luggage-items", "save"],
-					"query": [
-						{
-							"key": "ticketBookingId",
-							"value": "dddd2222-2222-2222-2222-222222222222"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "E1 - Luggage Item for Non-BOARDED Booking (400 Bad Request)",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"itemName\": \"Handbag\",\n    \"description\": \"Black leather bag\",\n    \"weightKg\": 5\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/luggage-items/save?ticketBookingId=dddd7777-7777-7777-7777-777777777777",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "luggage-items", "save"],
-					"query": [
-						{
-							"key": "ticketBookingId",
-							"value": "dddd7777-7777-7777-7777-777777777777"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "E1 - Ticket Booking Not Found (404 Not Found)",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"itemName\": \"Handbag\",\n    \"description\": \"Black leather bag\",\n    \"weightKg\": 5\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/luggage-items/save?ticketBookingId=99999999-9999-9999-9999-999999999999",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "luggage-items", "save"],
-					"query": [
-						{
-							"key": "ticketBookingId",
-							"value": "99999999-9999-9999-9999-999999999999"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "E2 - Luggage Item History of a Passenger",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/luggage-items/passenger/1200080011223344",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "luggage-items", "passenger", "1200080011223344"]
-				}
-			}
-		},
-		{
-			"name": "E3 - Delete Ticket Booking With Luggage (409 Conflict)",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/ticket-bookings/delete/dddd2222-2222-2222-2222-222222222222",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "ticket-bookings", "delete", "dddd2222-2222-2222-2222-222222222222"]
-				}
-			}
-		},
-		{
-			"name": "E3 - Delete Luggage Item (Success)",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/luggage-items/delete/eeee3333-3333-3333-3333-333333333333",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "luggage-items", "delete", "eeee3333-3333-3333-3333-333333333333"]
-				}
-			}
-		},
-		{
-			"name": "E3 - Delete Luggage Item (404 Not Found)",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/luggage-items/delete/99999999-9999-9999-9999-999999999999",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "luggage-items", "delete", "99999999-9999-9999-9999-999999999999"]
-				}
-			}
-		},
-		{
-			"name": "F1 - Ticket Bookings per Status",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/ticket-bookings/stats/by-status",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "ticket-bookings", "stats", "by-status"]
-				}
-			}
-		},
-		{
-			"name": "F2 - Driver is Absent (Cancel Day)",
-			"request": {
-				"method": "PATCH",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/ticket-bookings/cancel-day?driverId=bbbb1111-1111-1111-1111-111111111111&date=2026-10-20",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "ticket-bookings", "cancel-day"],
-					"query": [
-						{
-							"key": "driverId",
-							"value": "bbbb1111-1111-1111-1111-111111111111"
-						},
-						{
-							"key": "date",
-							"value": "2026-10-20"
-						}
-					]
-				}
-			}
-		},
-		{
-			"name": "Bonus 1 - Dashboard Summary",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/dashboard/summary",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "dashboard", "summary"]
-				}
-			}
-		},
-		{
-			"name": "Bonus 2 - Ticket Bookings Page by Page",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/ticket-bookings/page?page=0&size=5&sort=travelDate,desc",
-					"protocol": "http",
-					"host": ["localhost"],
-					"port": "8080",
-					"path": ["api", "ticket-bookings", "page"],
-					"query": [
-						{
-							"key": "page",
-							"value": "0"
-						},
-						{
-							"key": "size",
-							"value": "5"
-						},
-						{
-							"key": "sort",
-							"value": "travelDate,desc"
-						}
-					]
-				}
-			}
-		}
-	]
+    "info": {
+        "_postman_id": "140d7773-b5cd-4325-b60c-a69fad317f3d",
+        "name": "Bus Ticket Booking System Mid-Term API",
+        "description": "Postman Collection for Bus Ticket Booking System Backend Mid-Term Examination - Ndagijimana Cedric (ID: 27655)",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "A2 - Save Route",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Kigali - Gisenyi\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/routes/save",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "routes",
+                        "save"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "A2 - Get All Routes",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/routes/all",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "routes",
+                        "all"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "A2 - Get Route By Id",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/routes/11111111-1111-1111-1111-111111111111",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "routes",
+                        "11111111-1111-1111-1111-111111111111"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "A2 - Get Route By Id (404 Not Found)",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/routes/99999999-9999-9999-9999-999999999999",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "routes",
+                        "99999999-9999-9999-9999-999999999999"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "A2 - Update Route",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Kigali - Huye Express\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/routes/update/11111111-1111-1111-1111-111111111111",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "routes",
+                        "update",
+                        "11111111-1111-1111-1111-111111111111"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "A2 - Delete Route (404 Not Found)",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/routes/delete/99999999-9999-9999-9999-999999999999",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "routes",
+                        "delete",
+                        "99999999-9999-9999-9999-999999999999"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "A2 - Save Bus",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"busNumber\": 5,\n    \"name\": \"Trinity Express\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/buses/save",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "buses",
+                        "save"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "A2 - Get All Buses",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/buses/all",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "buses",
+                        "all"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "A2 - Save Driver",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"firstName\": \"Claude\",\n    \"lastName\": \"Mugabo\",\n    \"phone\": \"0788991122\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/drivers/save",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "drivers",
+                        "save"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "A2 - Get All Drivers",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/drivers/all",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "drivers",
+                        "all"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "A2 - Save Passenger",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"firstName\": \"Patrick\",\n    \"lastName\": \"Gasana\",\n    \"nationalId\": \"1200080099887766\",\n    \"phone\": \"0788998877\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/passengers/save",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "passengers",
+                        "save"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "A2 - Get All Passengers",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/passengers/all",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "passengers",
+                        "all"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "B1 - Find Passengers by Last Name",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/passengers/by-last-name?lastName=mugwaneza",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "passengers",
+                        "by-last-name"
+                    ],
+                    "query": [
+                        {
+                            "key": "lastName",
+                            "value": "mugwaneza"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "B2 - Ticket Bookings by Status",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/ticket-bookings/by-status?status=BOOKED",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "ticket-bookings",
+                        "by-status"
+                    ],
+                    "query": [
+                        {
+                            "key": "status",
+                            "value": "BOOKED"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "B3 - Ticket Bookings in Date Range",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/ticket-bookings/between?start=2026-10-01&end=2026-10-31",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "ticket-bookings",
+                        "between"
+                    ],
+                    "query": [
+                        {
+                            "key": "start",
+                            "value": "2026-10-01"
+                        },
+                        {
+                            "key": "end",
+                            "value": "2026-10-31"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "C1 - Drivers by Route",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/drivers/by-route?name=huye",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "drivers",
+                        "by-route"
+                    ],
+                    "query": [
+                        {
+                            "key": "name",
+                            "value": "huye"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "C2 - Free Buses",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/buses/free",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "buses",
+                        "free"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "C3 - Routes Nobody Holds",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/routes/unused",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "routes",
+                        "unused"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "C4 - Passengers of a Driver",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/passengers/of-driver/bbbb1111-1111-1111-1111-111111111111",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "passengers",
+                        "of-driver",
+                        "bbbb1111-1111-1111-1111-111111111111"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "C4 - Passengers of a Driver (404 Not Found)",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/passengers/of-driver/99999999-9999-9999-9999-999999999999",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "passengers",
+                        "of-driver",
+                        "99999999-9999-9999-9999-999999999999"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "D1 - Safe Saving (Success)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"travelDate\": \"2026-11-28\",\n    \"seatNumber\": 10,\n    \"destination\": \"Huye\",\n    \"passenger\": {\n        \"id\": \"cccc1111-1111-1111-1111-111111111111\"\n    },\n    \"driver\": {\n        \"id\": \"bbbb1111-1111-1111-1111-111111111111\"\n    }\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/ticket-bookings/save",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "ticket-bookings",
+                        "save"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "D1 - Past Date (400 Bad Request)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"travelDate\": \"2026-10-01\",\n    \"seatNumber\": 1,\n    \"destination\": \"Huye\",\n    \"passenger\": {\n        \"id\": \"cccc1111-1111-1111-1111-111111111111\"\n    },\n    \"driver\": {\n        \"id\": \"bbbb1111-1111-1111-1111-111111111111\"\n    }\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/ticket-bookings/save",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "ticket-bookings",
+                        "save"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "D1 - Driver Already Booked (409 Conflict)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"travelDate\": \"2026-11-18\",\n    \"seatNumber\": 2,\n    \"destination\": \"Musanze\",\n    \"passenger\": {\n        \"id\": \"cccc1111-1111-1111-1111-111111111111\"\n    },\n    \"driver\": {\n        \"id\": \"bbbb1111-1111-1111-1111-111111111111\"\n    }\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/ticket-bookings/save",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "ticket-bookings",
+                        "save"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "D2 - Status Flow (Success)",
+            "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/ticket-bookings/dddd5555-5555-5555-5555-555555555555/status?status=PAID",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "ticket-bookings",
+                        "dddd5555-5555-5555-5555-555555555555",
+                        "status"
+                    ],
+                    "query": [
+                        {
+                            "key": "status",
+                            "value": "PAID"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "D2 - Status Flow (400 Invalid Transition)",
+            "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/ticket-bookings/dddd2222-2222-2222-2222-222222222222/status?status=BOOKED",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "ticket-bookings",
+                        "dddd2222-2222-2222-2222-222222222222",
+                        "status"
+                    ],
+                    "query": [
+                        {
+                            "key": "status",
+                            "value": "BOOKED"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "D2 - Status Flow (404 Not Found)",
+            "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/ticket-bookings/99999999-9999-9999-9999-999999999999/status?status=PAID",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "ticket-bookings",
+                        "99999999-9999-9999-9999-999999999999",
+                        "status"
+                    ],
+                    "query": [
+                        {
+                            "key": "status",
+                            "value": "PAID"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "D3 - Add Route to Driver (Success)",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/drivers/bbbb3333-3333-3333-3333-333333333333/routes/22222222-2222-2222-2222-222222222222",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "drivers",
+                        "bbbb3333-3333-3333-3333-333333333333",
+                        "routes",
+                        "22222222-2222-2222-2222-222222222222"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "D3 - Driver Already Has Route (409 Conflict)",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/drivers/bbbb1111-1111-1111-1111-111111111111/routes/11111111-1111-1111-1111-111111111111",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "drivers",
+                        "bbbb1111-1111-1111-1111-111111111111",
+                        "routes",
+                        "11111111-1111-1111-1111-111111111111"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "D3 - Driver Not Found (404 Not Found)",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/drivers/99999999-9999-9999-9999-999999999999/routes/11111111-1111-1111-1111-111111111111",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "drivers",
+                        "99999999-9999-9999-9999-999999999999",
+                        "routes",
+                        "11111111-1111-1111-1111-111111111111"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "D4 - Move Driver to Another Bus (Success)",
+            "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/drivers/bbbb3333-3333-3333-3333-333333333333/bus?busNumber=4",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "drivers",
+                        "bbbb3333-3333-3333-3333-333333333333",
+                        "bus"
+                    ],
+                    "query": [
+                        {
+                            "key": "busNumber",
+                            "value": "4"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "D4 - Bus Taken by Another Driver (409 Conflict)",
+            "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/drivers/bbbb3333-3333-3333-3333-333333333333/bus?busNumber=1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "drivers",
+                        "bbbb3333-3333-3333-3333-333333333333",
+                        "bus"
+                    ],
+                    "query": [
+                        {
+                            "key": "busNumber",
+                            "value": "1"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "D4 - Bus Not Found (404 Not Found)",
+            "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/drivers/bbbb3333-3333-3333-3333-333333333333/bus?busNumber=99",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "drivers",
+                        "bbbb3333-3333-3333-3333-333333333333",
+                        "bus"
+                    ],
+                    "query": [
+                        {
+                            "key": "busNumber",
+                            "value": "99"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "E1 - Write a Luggage Item (Success)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"itemName\": \"Travel bag\",\n    \"description\": \"Blue bag in the hold\",\n    \"weightKg\": 15\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/luggage-items/save?ticketBookingId=dddd2222-2222-2222-2222-222222222222",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "luggage-items",
+                        "save"
+                    ],
+                    "query": [
+                        {
+                            "key": "ticketBookingId",
+                            "value": "dddd2222-2222-2222-2222-222222222222"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "E1 - Luggage Item for Non-BOARDED Booking (400 Bad Request)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"itemName\": \"Handbag\",\n    \"description\": \"Black leather bag\",\n    \"weightKg\": 5\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/luggage-items/save?ticketBookingId=dddd7777-7777-7777-7777-777777777777",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "luggage-items",
+                        "save"
+                    ],
+                    "query": [
+                        {
+                            "key": "ticketBookingId",
+                            "value": "dddd7777-7777-7777-7777-777777777777"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "E1 - Ticket Booking Not Found (404 Not Found)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"itemName\": \"Handbag\",\n    \"description\": \"Black leather bag\",\n    \"weightKg\": 5\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/luggage-items/save?ticketBookingId=99999999-9999-9999-9999-999999999999",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "luggage-items",
+                        "save"
+                    ],
+                    "query": [
+                        {
+                            "key": "ticketBookingId",
+                            "value": "99999999-9999-9999-9999-999999999999"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "E2 - Luggage Item History of a Passenger",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/luggage-items/passenger/1200080011223344",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "luggage-items",
+                        "passenger",
+                        "1200080011223344"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "E3 - Delete Ticket Booking With Luggage (409 Conflict)",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/ticket-bookings/delete/dddd2222-2222-2222-2222-222222222222",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "ticket-bookings",
+                        "delete",
+                        "dddd2222-2222-2222-2222-222222222222"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "E3 - Delete Luggage Item (Success)",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/luggage-items/delete/eeee3333-3333-3333-3333-333333333333",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "luggage-items",
+                        "delete",
+                        "eeee3333-3333-3333-3333-333333333333"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "E3 - Delete Luggage Item (404 Not Found)",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/luggage-items/delete/99999999-9999-9999-9999-999999999999",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "luggage-items",
+                        "delete",
+                        "99999999-9999-9999-9999-999999999999"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "F1 - Ticket Bookings per Status",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/ticket-bookings/stats/by-status",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "ticket-bookings",
+                        "stats",
+                        "by-status"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "F2 - Driver is Absent (Cancel Day)",
+            "request": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/ticket-bookings/cancel-day?driverId=bbbb1111-1111-1111-1111-111111111111&date=2026-10-20",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "ticket-bookings",
+                        "cancel-day"
+                    ],
+                    "query": [
+                        {
+                            "key": "driverId",
+                            "value": "bbbb1111-1111-1111-1111-111111111111"
+                        },
+                        {
+                            "key": "date",
+                            "value": "2026-10-20"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Bonus 1 - Dashboard Summary",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/dashboard/summary",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "dashboard",
+                        "summary"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Bonus 2 - Ticket Bookings Page by Page",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/ticket-bookings/page?page=0&size=5&sort=travelDate,desc",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "ticket-bookings",
+                        "page"
+                    ],
+                    "query": [
+                        {
+                            "key": "page",
+                            "value": "0"
+                        },
+                        {
+                            "key": "size",
+                            "value": "5"
+                        },
+                        {
+                            "key": "sort",
+                            "value": "travelDate,desc"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
 }
