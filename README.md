@@ -81,7 +81,7 @@ Tomcat started on port 8080 (http) with context path '/'
 Started BusTicketBookingSystemApplication in ... seconds
 ```
 The API is now live and accessible at:
-👉 **`http://localhost:8080`**
+ **`http://localhost:8080`**
 
 ---
 
